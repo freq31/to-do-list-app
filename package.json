@@ -1,0 +1,32 @@
+{
+  "name": "to_do_list_app",
+  "version": "1.0.0",
+  "description": "to do list app for storing and deleting your tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freq31/to-do-list-app.git"
+  },
+  "keywords": [
+    "to",
+    "do",
+    "list"
+  ],
+  "author": "Aditya Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freq31/to-do-list-app/issues"
+  },
+  "homepage": "https://github.com/freq31/to-do-list-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "expres": "^0.0.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^5.12.14"
+  }
+}
