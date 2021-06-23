@@ -13,8 +13,7 @@ module.exports.home=function(req,res){
         }
         return res.render('home',{
             title:"To Do List Manager",
-            title1:"Add New Task",
-            title2:"Your Tasks",
+            title1:"Your Tasks",
             taskList:tasks
         });
     });
@@ -35,7 +34,7 @@ module.exports.create_task=function(req,res){
         if(err){console.log('error in creating the task');
         return;}
         
-        return res.redirect('back');
+        return res.redirect('/');
     });
 }
 //delete a task

@@ -11,4 +11,6 @@ router.get('/',homeController.home);
 //finally export the router to be used in index.js
 router.post('/create-task',homeController.create_task);
 router.get('/delete-task',homeController.delete_task);
+router.use('/add-task',require('./add_new_task'));
+
 module.exports=router;

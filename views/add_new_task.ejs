@@ -1,0 +1,54 @@
+<link type="text/css" rel="stylesheet" href="/css/add_new_task.css">
+<div id="back-btn">
+    <a href="/">
+        <i class="fas fa-arrow-circle-left"></i>
+    </a>
+</div>
+<div id="add_tasks">
+    <h1><i class="fas fa-tasks"></i>&nbsp;<%=title1%></h1>
+    <form action="/create-task" method="POST">
+        <div id="form">
+            <div id="task-desc-form">
+                <p>Task Description</p>
+                <textarea name="task" rows="10" cols="30" required spellcheck="true"></textarea>
+    
+            </div>
+            <div id="other-task-details">
+                
+                <div id="datetime">
+                    <p><label for ="time">Time</label></p>
+                    
+                    <input type="time" name="time" required>
+                    <p><label for ="date">Date</label></p>
+                    
+                    <input type="date" name="date" required>
+        
+                </div>
+                <div id="category">
+                    <p>Category</p>
+                    <select name="category">
+                        <option selected>Work</option>
+                        <option>Travel</option>
+                        <option>Home</option>
+                        <option>Study</option>
+                        <option>Shop</option>
+                        <option>Cooking</option>
+                        <option>Music</option>
+                        <option>Play</option>
+                        <option>Exercise</option>
+                        <option>Health</option>
+                        <option>Private</option>
+                    </select>
+                </div>
+    
+            </div>
+                
+        </div>
+        
+        <div id="submit-btn">
+            <button type="submit">Add Task</button>
+        </div>
+    </form>
+
+
+</div>

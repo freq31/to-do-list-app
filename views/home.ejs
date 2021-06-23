@@ -1,52 +1,30 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 <link type="text/css" rel="stylesheet" href="/css/home.css">
-<div id="add_tasks">
-    <h1><%=title1%></h1>
-    <form action="/create-task" method="POST">
-        <p>Task Description</p>
-        <textarea name="task" rows="10" cols="30" required spellcheck="true"></textarea>
-        <div id="datetime">
-            <input type="time" name="time" required >
-            <input type="date" name="date" required>
 
-        </div>
-        
-        <p>Category</p>
-        <select name="category">
-            <option selected>Work</option>
-            <option>Travel</option>
-            <option>Home</option>
-            <option>Study</option>
-            <option>Shop</option>
-            <option>Cooking</option>
-            <option>Music</option>
-            <option>Play</option>
-            <option>Exercise</option>
-            <option>Health</option>
-            <option>Private</option>
-        </select>
-        <button type="submit">Add Task</button>
-    </form>
-
-
-</div>
 <div id="display_tasks">
-    <h1><%=title2%></h1>
+    
+    <h1><i class="fas fa-clipboard-list"></i>&nbsp;<%=title1%>:&emsp;<a href="/add-task"><i class="fas fa-plus-square"></i></a></h1>
     <ul id="task-list">
         
         <%for (let i of taskList){%>
             <li>
                 <div id="task-details">
-                    <p class="Task">Task Description:<%= i.task%></p>
-                    <p class="Time">Time:<%= i.time%></p>
-                    <p class="Date">Date:<%= i.date%></p>
-                    <p class="Category">Category:<%= i.category%></p>
-
+                    <div id="task-description">
+                        <div id="tasks">
+                            <span class="Task">Task Description:<%= i.task%></span>
+                            <span class="Category">Category:<%= i.category%></span>
+                        </div>
+                        <div id="due-date-time">
+                            <span class="Time">Time:<%= i.time%></span>
+                            <span class="Date">Date:<%= i.date%></span>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-icon">
+                        <a href="/delete-task/?id=<%= i._id %>"><i class="fas fa-window-close"></i></a>
+                    </div>
                 </div>
                 
-                <div id="delete-icon">
-                    <a href="/delete-task/?id=<%= i._id %>"><i class="fas fa-window-close"></i></a>
-                </div>
+                
             </li>
             
             <%}%>

@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+#form{
+    display:flex;
+    justify-content: space-evenly;
+}
+#back-btn{
+    font-weight: 800;
+    font-size:40px;
+    position: fixed;
+    top:3%;
+    left:0%;
+}
