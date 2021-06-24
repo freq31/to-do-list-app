@@ -2,7 +2,7 @@
 
 <div id="display_tasks">
     
-    <h1><i class="fas fa-clipboard-list"></i>&nbsp;<%=title1%>:&emsp;<a href="/add-task"><i class="fas fa-plus-square"></i></a></h1>
+    <h1><i class="fas fa-clipboard-list"></i>&nbsp;<%=title1%>:&emsp;<a href="/add-task"><i class="fas fa-plus-circle"></i></a></h1>
     <ul id="task-list">
         
         <%for (let i of taskList){%>
@@ -10,17 +10,17 @@
                 <div id="task-details">
                     <div id="task-description">
                         <div id="tasks">
-                            <span class="Task">Task Description:<%= i.task%></span>
-                            <span class="Category">Category:<%= i.category%></span>
+                            <span id="Task">Task Description:<%= i.task%></span>
+                            <span id="Category"><i class="cat"><%= i.category%></i></span>
                         </div>
                         <div id="due-date-time">
-                            <span class="Time">Time:<%= i.time%></span>
-                            <span class="Date">Date:<%= i.date%></span>
+                            <span id="Time">Time:<%= i.time%></span>
+                            <span id="Date"><i class="fas fa-calendar-check"></i>:<%= i.date%></span>
                         </div>
                     </div>
                     
                     <div id="delete-icon">
-                        <a href="/delete-task/?id=<%= i._id %>"><i class="fas fa-window-close"></i></a>
+                        <a href="/delete-task/?id=<%= i._id %>"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
                 
@@ -32,6 +32,7 @@
     </ul>
 
 </div>
-
+<script type="text/javascript" src="/js/home.js"></script>
+</script>
 
        
