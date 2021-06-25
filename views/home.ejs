@@ -9,14 +9,20 @@
             <li>
                 <div id="task-details">
                     <div id="task-description">
-                        <div id="tasks">
-                            <span id="Task">Task Description:<%= i.task%></span>
-                            <span id="Category"><i class="cat"><%= i.category%></i></span>
+                        
+                        
+                        <div id="sidebar">
+                            <div id="Category"><i class="cat fas fa-briefcase"><%= i.category%></i></div>
+                            <div id="due-date-time">
+                                <span id="Date"><i class="fas fa-calendar-check"></i>:<%= i.date%></span>
+                                <span id="Time">&nbsp;<%= i.time%></span>
+                            </div>
+
                         </div>
-                        <div id="due-date-time">
-                            <span id="Time">Time:<%= i.time%></span>
-                            <span id="Date"><i class="fas fa-calendar-check"></i>:<%= i.date%></span>
-                        </div>
+                        <div id="Task"><%= i.task%></div>
+                        
+                        
+                    
                     </div>
                     
                     <div id="delete-icon">

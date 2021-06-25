@@ -1,4 +1,4 @@
-const categories={
+var categories={
     "Work":"fas fa-briefcase",
     "Travel":"fas fa-route",
     "Home":"fas fa-house-user",
@@ -12,13 +12,22 @@ const categories={
     "Private":"fas fa-user-lock"
 
 };
-
-let category=document.getElementsByClassName("cat");
-
-for(let i in category){
-    //console.log(i,category[i]);
-    let text=category[i].innerText;
-    category[i].setAttribute("class", categories[text]);
-    //console.log(i,text);
-    //console.log(i,category[i]);
+var text=[];
+var t;
+var category=document.getElementsByClassName("cat");
+var n=category.length;
+var i=0
+while(i<n){
+    text[i]=category[i].innerText;
+    //console.log(categories[text[i]]);
+    //t="<i class="+categories[text[i]]+"></i>";
+    category[i].innerText="";
+    i++;
 }
+
+i=0;
+while(i<n){
+    category[i].className=categories[text[i]];
+    i++;
+}
+

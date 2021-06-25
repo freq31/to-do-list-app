@@ -15,7 +15,8 @@ h1 a i:hover{
     list-style: none;
 }
 #task-details{
-    
+    display: flex;
+    justify-content: space-evenly;
     margin:auto;
     width:80%;
     height:10%;
@@ -23,13 +24,13 @@ h1 a i:hover{
     background-color: #FFE227;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-}
+}  
 li{
-    margin-bottom: 3%;
-    list-style: none;
+    margin-bottom:3%;
+    list-style:none;
     
 }
-
+/*
 #tasks{
     display: flex;
     justify-content: space-evenly;
@@ -37,12 +38,32 @@ li{
 #due-date-time{
     display: flex;
     justify-content: space-evenly;
+}*/
+#Category{
+    position:relative;
+    /*right:45%;*/
+}
+#due-date-time{
+    position:relative;
+    /*right:40%;*/
+    opacity:0.7;
+}
+#sidebar{
+    left:10%;
+}
+#Task{
+    position: relative;
+    left:20%;
+    font-weight: 600;
+    font-style: oblique;
+    text-transform: capitalize;
 }
 #task-details:hover{
     /*opacity:0.6;*/
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(114, 84, 84, 0.19);
 }
 #delete-icon{
+    margin:2% 0;
     display: inline-block;
     width:5%;
     visibility: hidden;
@@ -51,7 +72,9 @@ li{
     visibility: visible;
 }
 #task-description{
-    display: inline-block;
+    margin:2% 0;
+    display: flex;
+    /*justify-content: space-evenly;*/
     width:90%;
 }
 
