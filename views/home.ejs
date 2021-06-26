@@ -1,42 +1,27 @@
 <link type="text/css" rel="stylesheet" href="/css/home.css">
-
 <div id="display_tasks">
-    
     <h1><i class="fas fa-clipboard-list"></i>&nbsp;<%=title1%>:&emsp;<a href="/add-task"><i class="fas fa-plus-circle"></i></a></h1>
     <ul id="task-list">
-        
         <%for (let i of taskList){%>
             <li>
                 <div id="task-details">
                     <div id="task-description">
-                        
-                        
                         <div id="sidebar">
                             <div id="Category"><i class="cat fas fa-briefcase"><%= i.category%></i></div>
                             <div id="due-date-time">
-                                <span id="Date"><i class="fas fa-calendar-check"></i>:<%= i.date%></span>
+                                <span id="Date"><i class="date fas fa-calendar-check"><%= i.date%></i></span>
                                 <span id="Time">&nbsp;<%= i.time%></span>
                             </div>
-
                         </div>
                         <div id="Task"><%= i.task%></div>
-                        
-                        
-                    
                     </div>
-                    
                     <div id="delete-icon">
                         <a href="/delete-task/?id=<%= i._id %>"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
-                
-                
             </li>
-            
-            <%}%>
-
+        <%}%>
     </ul>
-
 </div>
 <script type="text/javascript" src="/js/home.js"></script>
 </script>

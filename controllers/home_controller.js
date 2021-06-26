@@ -1,11 +1,9 @@
 //require the document 
 const db=require('../config/mongoose');
 const Task=require('../models/task_list');
-//send a response to the request given by the router.
-//console.log(Task);
+//rendering the home page of my project.
 module.exports.home=function(req,res){
-    //return res.end('<h1>express is up for codeial</h1>');
-    //render the response 
+    //first find the data in the databse and send the tasklist to the views for rendering home page
     Task.find({},function(err,tasks){
         if(err){
             console.log('error in fetching tasks from db');
@@ -20,10 +18,10 @@ module.exports.home=function(req,res){
         
     
 }
-//add new task
+//add new task to our database
 module.exports.create_task=function(req,res){
     
-    //render the response 
+    //add new task to database 
     Task.create({
         task:req.body.task,
         time:req.body.time,
@@ -33,7 +31,7 @@ module.exports.create_task=function(req,res){
     },function(err,newTask){
         if(err){console.log('error in creating the task');
         return;}
-        
+        //return back to the home page after adding new task
         return res.redirect('/');
     });
 }
@@ -47,6 +45,7 @@ module.exports.delete_task=function(req,res){
             console.log('error in deleting from db');
             return;
         }
+        //return back to the page which gave the request
         return res.redirect('back');
     })
 

@@ -1,3 +1,4 @@
+//create database schema
 const mongoose=require('mongoose');
 const taskschema=new mongoose.Schema({
     task:{
@@ -21,5 +22,6 @@ const taskschema=new mongoose.Schema({
     }
     
 });
+//giving name to our collection
 const task=mongoose.model('task',taskschema);
 module.exports=task;
